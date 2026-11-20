@@ -28,11 +28,11 @@ The two files in `docs/screenshots/` are placeholders: replace them with real ca
 
 4. Open <http://localhost:3000> for English and <http://localhost:3000/fa> for Persian.
 
-Prefer the command line? `npx nuxi init my-app -t gh:V-CodeSmith/nuxt-i18n-starter` works as well.
+Prefer the command line? `npx nuxi init my-app --template gh:V-CodeSmith/nuxt-i18n-starter` works as well.
 
 ## Features
 
-- [x] English and Persian translation catalogues with lazy loading
+- [x] English and Persian translation catalogues, lazy-loaded by default
 - [x] URL strategy `prefix_except_default` (English at `/`, Persian at `/fa`)
 - [x] Automatic `<html lang>` and `<html dir>` switching on every locale change
 - [x] RTL-aware layouts built exclusively with CSS logical properties
@@ -45,7 +45,9 @@ Prefer the command line? `npx nuxi init my-app -t gh:V-CodeSmith/nuxt-i18n-start
 - [x] GitHub Actions CI: lint, typecheck and build on every push and pull request
 - [x] Dependabot for npm and GitHub Actions
 - [x] Reusable `BaseButton`, `BaseCard` and `BaseInput` components
-- [x] Translated home page, about page and 404 page
+- [x] Accessible controls: labelled inputs, `aria-pressed`/`aria-expanded` states, visible focus rings
+- [x] Translated home page, about page and a real HTTP 404 page
+- [x] Nuxt 4 `app/` source layout with per-environment type configurations
 
 ## Tech stack
 
@@ -95,16 +97,21 @@ nuxt-i18n-starter/
 ├── i18n/
 │   ├── i18n.config.ts              # vue-i18n runtime config
 │   └── locales/{en,fa}.json        # Translation catalogues
-├── docs/screenshots/               # README placeholders
+├── docs/screenshots/               # README placeholders (home-en.svg, home-fa.svg)
 ├── .github/
-│   ├── workflows/ci.yml
-│   └── dependabot.yml
-├── .husky/pre-commit
-├── eslint.config.mjs
-├── nuxt.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
+│   ├── workflows/ci.yml            # lint + typecheck + build on push and PR
+│   └── dependabot.yml              # weekly npm and GitHub Actions updates
+├── .husky/pre-commit               # runs lint-staged
+├── eslint.config.mjs               # flat config extending the Nuxt preset
+├── nuxt.config.ts                  # modules, i18n locales, color mode, head
+├── tailwind.config.ts              # colors, fonts, content globs
+├── tsconfig.json                   # extends .nuxt/tsconfig.json, strict options
+├── .nvmrc                          # Node 22 (22.22.3+)
+├── .prettierrc / .prettierignore
+├── .editorconfig
+├── LICENSE
+├── package.json
+└── package-lock.json
 ```
 
 Nuxt 4 uses `app/` as the source directory by default, so all application code lives there, while `i18n/`, `public/` and `server/` stay at the project root.
@@ -179,6 +186,23 @@ Because the values are channel triples, Tailwind opacity modifiers such as `bg-p
 To change the brand color, edit `--color-primary` and `--color-ring` in both `:root` and `.dark`. To change typography, update `--font-english` / `--font-persian` and, if you replace the font files, the `@font-face` blocks plus `app/assets/fonts/`.
 
 Theme preference is stored by `@nuxtjs/color-mode` under `nuxt-i18n-starter-color-mode`; the store mirrors it under `nuxt-i18n-starter-settings`. Both keys are configurable.
+
+## Verification
+
+The template ships no unit-test suite on purpose; these are the quality gates that must pass, and the same ones CI runs:
+
+```bash
+npm run lint          # ESLint flat config
+npm run format:check  # Prettier, including Tailwind class order
+npm run typecheck     # vue-tsc through `nuxt typecheck`
+npm run build         # production build with Nitro
+```
+
+`.github/workflows/ci.yml` runs `npm ci` and then lint, typecheck and build on Node 22 (from `.nvmrc`) for every push and pull request to `main`.
+
+## Deployment
+
+`npm run build` emits a Node server in `.output/`; run it with `node .output/server/index.mjs` or `npm run preview`. This is a standard Nuxt 4 SSR app, so deploy it with your host's Nitro preset (Vercel, Netlify, Cloudflare, plain Node) or build for static hosting with `npm run generate`. No environment variables are required by the starter itself.
 
 ## Architecture decisions
 
