@@ -2,10 +2,10 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/V-CodeSmith/nuxt-i18n-starter/ci.yml?branch=main&label=CI)](https://github.com/V-CodeSmith/nuxt-i18n-starter/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
-[![Nuxt 3](https://img.shields.io/badge/Nuxt-3-00DC82.svg)](https://nuxt.com)
+[![Nuxt 4](https://img.shields.io/badge/Nuxt-4-00DC82.svg)](https://nuxt.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6.svg)](https://www.typescriptlang.org/)
 
-A production-ready **Nuxt 3** starter for bilingual **English + Persian (فارسی)** products. Internationalization, RTL layout, dark mode, Pinia, strict TypeScript, linting, pre-commit hooks and CI are already configured — clone it and start writing features instead of infrastructure.
+A production-ready **Nuxt 4** starter for bilingual **English + Persian (فارسی)** products. Internationalization, RTL layout, dark mode, Pinia, strict TypeScript, linting, pre-commit hooks and CI are already configured — clone it and start writing features instead of infrastructure.
 
 ## Screenshots
 
@@ -49,18 +49,19 @@ Prefer the command line? `npx nuxi init my-app -t gh:V-CodeSmith/nuxt-i18n-start
 
 ## Tech stack
 
-| Layer       | Choice                                               |
-| ----------- | ---------------------------------------------------- |
-| Framework   | Nuxt 3 (`^3.21`)                                     |
-| UI          | Vue 3, `<script setup lang="ts">`, Composition API   |
-| State       | Pinia 3 with Setup Stores                            |
-| Persistence | `pinia-plugin-persistedstate`                        |
-| i18n        | `@nuxtjs/i18n` 9 (`vue-i18n` Composition API)        |
-| Theming     | `@nuxtjs/color-mode`                                 |
-| Styling     | Tailwind CSS 3.4 with CSS-variable design tokens     |
-| Language    | TypeScript 5 (strict)                                |
-| Quality     | ESLint 9 flat config, Prettier 3, Husky, lint-staged |
-| CI          | GitHub Actions                                       |
+| Layer       | Choice                                                |
+| ----------- | ----------------------------------------------------- |
+| Framework   | Nuxt 4 (`^4.6`)                                       |
+| UI          | Vue 3, `<script setup lang="ts">`, Composition API    |
+| Routing     | Vue Router 5                                          |
+| State       | Pinia 4 with Setup Stores                             |
+| Persistence | `pinia-plugin-persistedstate`                         |
+| i18n        | `@nuxtjs/i18n` 10 (`vue-i18n` 11 Composition API)     |
+| Theming     | `@nuxtjs/color-mode` 4                                |
+| Styling     | Tailwind CSS 3.4 with CSS-variable design tokens      |
+| Language    | TypeScript 5 (strict, `vue-tsc` 3)                    |
+| Quality     | ESLint 10 flat config, Prettier 3, Husky, lint-staged |
+| CI          | GitHub Actions                                        |
 
 ## Project structure
 
@@ -106,11 +107,11 @@ nuxt-i18n-starter/
 └── package.json
 ```
 
-`nuxt.config.ts` sets `srcDir: 'app/'`, so all application code lives in `app/`, while `i18n/`, `public/` and `server/` stay at the project root.
+Nuxt 4 uses `app/` as the source directory by default, so all application code lives there, while `i18n/`, `public/` and `server/` stay at the project root.
 
 ## Getting started
 
-Requirements: **Node.js 20.11.1 or newer** (see `.nvmrc`) and npm.
+Requirements: **Node.js 22.22.3 or newer** (see `.nvmrc`, which pins Node 22) and npm. Nuxt 4.6 requires Node 22.22.3+, Node 24.15+ or Node 26+.
 
 ```bash
 npm install     # also runs `nuxt prepare`

@@ -9,7 +9,7 @@ useHead(() => ({
 }))
 
 const STACK = [
-  'Nuxt 3',
+  'Nuxt 4',
   'Vue 3',
   'Pinia',
   'Tailwind CSS',

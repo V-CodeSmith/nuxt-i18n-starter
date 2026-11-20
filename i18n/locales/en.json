@@ -14,7 +14,7 @@
     "hero": {
       "badge": "Bilingual by default",
       "title": "Build for every direction.",
-      "subtitle": "A Nuxt 3 starter with English and Persian, RTL layouts, dark mode, Pinia Setup Stores and strict TypeScript — configured before you write your first component.",
+      "subtitle": "A Nuxt 4 starter with English and Persian, RTL layouts, dark mode, Pinia Setup Stores and strict TypeScript — configured before you write your first component.",
       "primaryCta": "Explore the stack",
       "secondaryCta": "See the approach"
     },
@@ -73,7 +73,7 @@
     "directionTitle": "Direction as a first-class concern",
     "directionBody": "Layouts use logical properties such as ms-, me-, ps- and pe- instead of left and right, so one set of styles serves both writing directions.",
     "stackTitle": "The stack",
-    "stackBody": "Nuxt 3, Vue 3 Composition API, Pinia, Tailwind CSS, {'@'}nuxtjs/i18n, {'@'}nuxtjs/color-mode, ESLint, Prettier and Husky.",
+    "stackBody": "Nuxt 4, Vue 3 Composition API, Pinia, Tailwind CSS, {'@'}nuxtjs/i18n, {'@'}nuxtjs/color-mode, ESLint, Prettier and Husky.",
     "backHome": "Back to home"
   },
   "notFound": {

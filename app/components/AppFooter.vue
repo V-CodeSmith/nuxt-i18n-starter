@@ -12,7 +12,7 @@ const year = new Date().getFullYear()
       <p>{{ t('footer.copyright', { year }) }}</p>
       <p class="flex flex-wrap items-center gap-x-1.5 gap-y-1">
         <span>{{ t('footer.builtWith') }}</span>
-        <span class="font-medium text-foreground">Nuxt 3</span>
+        <span class="font-medium text-foreground">Nuxt 4</span>
         <span aria-hidden="true">·</span>
         <span class="font-medium text-foreground">Pinia</span>
         <span aria-hidden="true">·</span>

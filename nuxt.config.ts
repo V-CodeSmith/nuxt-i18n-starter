@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'A production-ready Nuxt 3 starter with English and Persian translations, RTL support, dark mode, Pinia and strict TypeScript.',
+            'A production-ready Nuxt 4 starter with English and Persian translations, RTL support, dark mode, Pinia and strict TypeScript.',
         },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'theme-color', content: '#f8fafc', media: '(prefers-color-scheme: light)' },
@@ -46,11 +46,6 @@ export default defineNuxtConfig({
     dataValue: 'theme',
   },
 
-  // All application code (components, pages, stores, ...) lives in `app/`.
-  srcDir: 'app/',
-
-  // Required for the app manifest used by route rules and client-side prefetching.
-  experimental: { appManifest: true },
   compatibilityDate: '2025-07-15',
 
   typescript: {
@@ -70,7 +65,6 @@ export default defineNuxtConfig({
     langDir: 'locales',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
-    lazy: true,
     vueI18n: './i18n.config.ts',
     locales: [
       {
@@ -94,9 +88,6 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       alwaysRedirect: false,
       fallbackLocale: 'en',
-    },
-    bundle: {
-      optimizeTranslationDirective: false,
     },
   },
 

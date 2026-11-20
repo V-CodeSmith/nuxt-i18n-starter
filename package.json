@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Production-ready Nuxt 3 starter with English/Persian i18n, RTL support, dark mode, Pinia Setup Stores and strict TypeScript.",
+  "description": "Production-ready Nuxt 4 starter with English/Persian i18n, RTL support, dark mode, Pinia Setup Stores and strict TypeScript.",
   "license": "MIT",
   "engines": {
-    "node": ">=20.11.1"
+    "node": ">=22.22.3"
   },
   "scripts": {
     "dev": "nuxt dev",
@@ -22,26 +22,26 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/i18n": "^9.5.6",
+    "@nuxtjs/color-mode": "^4.1.0",
+    "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@pinia/nuxt": "^0.11.3",
-    "nuxt": "^3.21.11",
-    "pinia": "^3.0.4",
+    "@pinia/nuxt": "^1.0.3",
+    "nuxt": "^4.6.4",
+    "pinia": "^4.1.0",
     "pinia-plugin-persistedstate": "^4.7.1",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1"
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.9.0",
-    "eslint": "^9.18.0",
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.15.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^3.4.19",
     "typescript": "^5.7.3",
-    "vue-tsc": "^2.2.0"
+    "vue-tsc": "^3.3.14"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,mts,vue}": [
