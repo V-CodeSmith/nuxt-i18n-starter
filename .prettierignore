@@ -1,0 +1,20 @@
+# Generated and vendored output
+.nuxt
+.output
+.nitro
+.cache
+dist
+coverage
+node_modules
+
+# Package manager state
+package-lock.json
+
+# Binary assets
+app/assets/fonts
+public
+
+# Environment files
+.env
+.env.*
+!.env.example

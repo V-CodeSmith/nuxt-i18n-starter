@@ -1,0 +1,103 @@
+{
+  "app": {
+    "name": "Nuxt i18n Starter",
+    "tagline": "Bilingual by design, right-to-left ready."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ariaLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "hero": {
+      "badge": "Bilingual by default",
+      "title": "Build for every direction.",
+      "subtitle": "A Nuxt 3 starter with English and Persian, RTL layouts, dark mode, Pinia Setup Stores and strict TypeScript — configured before you write your first component.",
+      "primaryCta": "Explore the stack",
+      "secondaryCta": "See the approach"
+    },
+    "features": {
+      "title": "Everything is already wired up",
+      "subtitle": "Skip the infrastructure work and start building the product.",
+      "items": {
+        "i18n": {
+          "title": "Internationalization",
+          "description": "English and Persian catalogues, lazy loading and URL prefixes handled by {'@'}nuxtjs/i18n."
+        },
+        "rtl": {
+          "title": "Right-to-left layouts",
+          "description": "Direction and fonts follow the active locale, using logical CSS properties only."
+        },
+        "theme": {
+          "title": "Light, dark and system",
+          "description": "Color mode is persisted per visitor and applied before the first paint, with no flash."
+        },
+        "stores": {
+          "title": "Pinia Setup Stores",
+          "description": "Typed state with localStorage persistence, written in the Composition API style."
+        },
+        "typescript": {
+          "title": "Strict TypeScript",
+          "description": "No any types, generated route types and a typecheck script wired into CI."
+        },
+        "quality": {
+          "title": "Quality gates",
+          "description": "ESLint flat config, Prettier, Husky hooks and GitHub Actions on every push."
+        }
+      }
+    },
+    "demo": {
+      "title": "Live demo",
+      "subtitle": "Switch the language or the theme and watch the whole page follow.",
+      "localeLabel": "Current locale",
+      "fontLabel": "Active font",
+      "directionLabel": "Text direction",
+      "themeLabel": "Active theme",
+      "sampleLabel": "Sample sentence",
+      "sampleText": "This sentence reflows when the document direction changes.",
+      "logicalLabel": "Logical spacing demo",
+      "logicalStart": "Start",
+      "logicalEnd": "End",
+      "note": "The boxes above use padding-inline-start and padding-inline-end, so they stay correct in both directions."
+    }
+  },
+  "about": {
+    "title": "About this starter",
+    "intro": "nuxt-i18n-starter exists so a bilingual product can start on solid ground instead of a blank folder.",
+    "languageTitle": "One app, two languages",
+    "languageBody": "English is the default locale and lives at the root URL. Persian is served under /fa with a right-to-left document, translated navigation and Vazirmatn typography.",
+    "stateTitle": "Small, typed state",
+    "stateBody": "The settings store keeps the locale and color mode in a Pinia Setup Store, and persists both choices in localStorage so they survive reloads.",
+    "directionTitle": "Direction as a first-class concern",
+    "directionBody": "Layouts use logical properties such as ms-, me-, ps- and pe- instead of left and right, so one set of styles serves both writing directions.",
+    "stackTitle": "The stack",
+    "stackBody": "Nuxt 3, Vue 3 Composition API, Pinia, Tailwind CSS, {'@'}nuxtjs/i18n, {'@'}nuxtjs/color-mode, ESLint, Prettier and Husky.",
+    "backHome": "Back to home"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you were looking for does not exist or has moved.",
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "copyright": "© {year} Nuxt i18n Starter. All rights reserved.",
+    "builtWith": "Built with"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "fa": "Persian",
+    "switchTo": "Switch language to {language}"
+  },
+  "themeToggle": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "current": "Current theme: {mode}",
+    "switch": "Change theme"
+  }
+}
