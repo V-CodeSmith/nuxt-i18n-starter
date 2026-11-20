@@ -1,13 +1,11 @@
 # nuxt-i18n-starter
 
-[![CI](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/ci.yml?branch=main&label=CI)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/V-CodeSmith/nuxt-i18n-starter/ci.yml?branch=main&label=CI)](https://github.com/V-CodeSmith/nuxt-i18n-starter/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![Nuxt 3](https://img.shields.io/badge/Nuxt-3-00DC82.svg)](https://nuxt.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6.svg)](https://www.typescriptlang.org/)
 
 A production-ready **Nuxt 3** starter for bilingual **English + Persian (فارسی)** products. Internationalization, RTL layout, dark mode, Pinia, strict TypeScript, linting, pre-commit hooks and CI are already configured — clone it and start writing features instead of infrastructure.
-
-> Replace `OWNER/REPO` in the CI badge with your repository path after publishing.
 
 ## Screenshots
 
@@ -30,7 +28,7 @@ The two files in `docs/screenshots/` are placeholders: replace them with real ca
 
 4. Open <http://localhost:3000> for English and <http://localhost:3000/fa> for Persian.
 
-Prefer the command line? `npx nuxi init my-app -t gh:OWNER/REPO` works as well.
+Prefer the command line? `npx nuxi init my-app -t gh:V-CodeSmith/nuxt-i18n-starter` works as well.
 
 ## Features
 
